@@ -14,6 +14,7 @@ repo init -u https://github.com/SEL4PROJ/sel4-tutorials-manifest
 
 repo sync
 
+#Combine folders sel4-tutorial and WSFW
 
 #install VMware workstation
 
@@ -72,28 +73,28 @@ minicom  -D  /dev/pts/2   -b  9600
 
 #login information: user is root. password is root.
 
-Welcome to minicom 2.6.2
-
-OPTIONS: I18n 
-Compiled on Jun 10 2014, 03:20:53.
-Port /dev/pts/2, 10:37:13
-
-Press CTRL-A Z for help on special keys
-
-fffff801e09c000)
-IOMMU: Create VTD context table for PCI bus 0x7f (pptr=0xffffff801e09d000)
-IOMMU: Create VTD context table for PCI bus 0x80 (pptr=0xffffff801e09e000)
-IOMMU: Create VTD context table for PCI bus 0x81 (pptr=0xffffff801e09f000)
-IOMMU: Create VTD context table for PCI bus 0x82 (pptr=0xffffff801e0a0000)
-IOMMU: Create VTD context table for PCI bus 0x83 (pptr=0xffffff801e0a1000)
-IOMMU: Create VTD context table for PCI bus 0x84 (pptr=0xffffff801e0a2000)
-IOMMU: Create VTD context table for PCI bus 0x85 (pptr=0xffffff801e0a3000)
-IOMMU: Create VTD context table for PCI bus 0x86 (pptr=0xffffff801e0a4000)
-IOMMU: Create VTD context table for PCI bus 0x87 (pptr=0xffffff801e0a5000)
-IOMMU: Create VTD context table for PCI bus 0x88 (pptr=0xffffff801e0a6000)
-IOMMU: Create VTD context table for PCI bus 0x89 (pptr=0xffffff801e0a7000)
-IOMMU: Create VTD context table for PCI bus 0x8a (pptr=0xffffff801e0a8000)
-IOMMU: Create VTD context table for PCI bus 0x8b (pptr=0xffffff801e0a9000)
+Welcome to minicom 2.6.2      
+      
+OPTIONS: I18n       
+Compiled on Jun 10 2014, 03:20:53.      
+Port /dev/pts/2, 10:37:13      
+      
+Press CTRL-A Z for help on special keys      
+      
+fffff801e09c000)      
+IOMMU: Create VTD context table for PCI bus 0x7f (pptr=0xffffff801e09d000)      
+IOMMU: Create VTD context table for PCI bus 0x80 (pptr=0xffffff801e09e000)      
+IOMMU: Create VTD context table for PCI bus 0x81 (pptr=0xffffff801e09f000)      
+IOMMU: Create VTD context table for PCI bus 0x82 (pptr=0xffffff801e0a0000)      
+IOMMU: Create VTD context table for PCI bus 0x83 (pptr=0xffffff801e0a1000)      
+IOMMU: Create VTD context table for PCI bus 0x84 (pptr=0xffffff801e0a2000)      
+IOMMU: Create VTD context table for PCI bus 0x85 (pptr=0xffffff801e0a3000)      
+IOMMU: Create VTD context table for PCI bus 0x86 (pptr=0xffffff801e0a4000)      
+IOMMU: Create VTD context table for PCI bus 0x87 (pptr=0xffffff801e0a5000)      
+IOMMU: Create VTD context table for PCI bus 0x88 (pptr=0xffffff801e0a6000)      
+IOMMU: Create VTD context table for PCI bus 0x89 (pptr=0xffffff801e0a7000)      
+IOMMU: Create VTD context table for PCI bus 0x8a (pptr=0xffffff801e0a8000)      
+IOMMU: Create VTD context table for PCI bus 0x8b (pptr=0xffffff801e0a9000)      
 IOMMU: Create VTD context table for PCI bus 0x8c (pptr=0xffffff801e0aa000)      
 IOMMU: Create VTD context table for PCI bus 0x8d (pptr=0xffffff801e0ab000)      
 IOMMU: Create VTD context table for PCI bus 0x8e (pptr=0xffffff801e0ac000)      
