@@ -302,6 +302,7 @@ parse_arguments(int argc, char **argv, struct twsfw_ctl *ret_ctl)
 int
 main(int argc, char *argv[])
 {
+	caml_main(argv);
 	struct twsfw_ctl ctl = {};
 	int ret;
 
