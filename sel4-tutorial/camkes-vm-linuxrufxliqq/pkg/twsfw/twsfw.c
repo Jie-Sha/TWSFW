@@ -6,6 +6,10 @@
 #include <arpa/inet.h>
 #include <limits.h>
 
+#include <caml/mlvalues.h>
+#include <caml/callback.h>
+#include <caml/alloc.h>
+
 #include "twsfw.h"
 
 #define PORT_NUM_MAX USHRT_MAX
@@ -124,6 +128,19 @@ parse_number(const char *str, uint32_t min_val, uint32_t max_val)
 	return num;
 }
 
+static int
+call_caml_check(int arg1,int arg2,int arg3,int arg4,int arg5,int arg6,int arg7){
+	 value t[7];
+	t[0]=Val_int(arg1);
+	t[1]=Val_int(arg2);
+	t[2]=Val_int(arg3);
+	t[3]=Val_int(arg4);
+	t[4]=Val_int(arg5);
+	t[5]=Val_int(arg6);
+	t[6]=Val_int(arg7);
+	value r = caml_callbackN(*caml_named_value("check function"), 7 , t);
+	return Int_val(r);
+}
 
 /*
  * The function parses arguments (argv) to form a control instruction.
@@ -294,6 +311,7 @@ main(int argc, char *argv[])
 
 	switch(ctl.mode) {
 	case TWSFW_ADD:
+		if(!call_caml_check(ctl.rule.s_ip, ctl.rule.s_mask, ctl.rule.s_port, ctl.rule.d_ip, ctl.rule.d_mask, ctl.rule.d_port,  ctl.rule.proto)) break;
 	case TWSFW_REMOVE:
 		send_instruction(&ctl);
 		break;
